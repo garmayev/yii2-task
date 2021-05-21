@@ -15,12 +15,15 @@ class Module extends \yii\base\Module
     public $urlPrefix = "task";
     public $urlRules = [
         "/" => "default/index",
-        "callback" => "default/callback",
     ];
 
     /**
      * {@inheritdoc}
      */
-    public $controllerNamespace = 'garmayev\task\controllers';
+    public string $controllerNamespace = 'garmayev\task\controllers';
 
+    public function init()
+    {
+        parent::init();
+    }
 }
